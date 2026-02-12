@@ -20,12 +20,14 @@ a{
     border-radius: 20px;
     background-color: #fff;
     padding: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .nav{
     height: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+
+    padding-inline: 20px;
     border-radius: 10px;
 }
 
@@ -45,7 +47,6 @@ header .container .nav{
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
-    padding-inline: 20px;
 }
 
 header .container .nav .icon{
@@ -102,22 +103,37 @@ main section {
 
 main .home{
     height: calc(100vh - 81px);
+    
 }
 
 main .home .container{
     background-image: url(../images/sardorlarGroup.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 30px -30vh ;
+    
 
 }
 
 main .home .container .nav {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
 
 }
 
+main .home .container .nav h1{
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
 
-
+main .home .container .nav p{
+    /* border: 1px solid red; */
+    /* width: 300px; */
+    text-align: end;
+    font-size: 24px;
+}
 
 /* responsive */
 
