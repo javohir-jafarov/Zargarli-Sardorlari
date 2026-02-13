@@ -108,12 +108,13 @@ main .home{
 
 main .home .container{
     background-image: url(../images/sardorlarGroup.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: 30px -30vh ;
+    background-position: bottom ;
     
 
 }
+
 
 main .home .container .nav {
     display: flex;
@@ -126,6 +127,8 @@ main .home .container .nav h1{
     font-size: 64px;
     font-weight: 700;
     letter-spacing: -2px;
+    border: 1px solid red;
+    max-width: 500px;
 }
 
 main .home .container .nav p{
@@ -133,9 +136,30 @@ main .home .container .nav p{
     /* width: 300px; */
     text-align: end;
     font-size: 24px;
+    padding-block: 15px;
 }
 
 /* responsive */
+
+
+@media screen and (max-width: 1000px) {
+    main .home .container .nav {
+        flex-direction: column;
+        padding-top: 40px;
+        text-align: center;
+        justify-content: start;
+    }
+    main .home .container .nav h1{
+        font-size: 32px;
+        text-align: center;
+        font-weight: 600;
+        margin-inline: auto;
+    }
+    main .home .container .nav p{
+        text-align: center;
+        color: rgba(0, 0, 0, 0.678);
+    }
+}
 
 @media screen and (max-width: 768px) {
     header .container .nav .icon p {
@@ -151,17 +175,32 @@ main .home .container .nav p{
     header .container .nav .navigation li{
         font-size: 12px;
     }
+    main .home .container .nav p{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 412px) {
     header{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         right: 0;
+        left: 0;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 10px;
+    }
+    header .container .nav{
+        justify-content: center;
+    }
+    header .container .nav .navigation{
+        justify-content: space-between;
+        width: 100%;
     }
     header .container .nav .navigation li a span{
         font-size: 10px;
     }
+    
 
     header .container .nav .navigation li a svg{
         display: flex;
@@ -171,4 +210,5 @@ main .home .container .nav p{
     header .container .nav .icon {
         display: none;
     }
+    
 }
