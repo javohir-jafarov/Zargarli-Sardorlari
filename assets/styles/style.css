@@ -127,7 +127,6 @@ main .home .container .nav h1{
     font-size: 64px;
     font-weight: 700;
     letter-spacing: -2px;
-    border: 1px solid red;
     max-width: 500px;
 }
 
